@@ -126,9 +126,9 @@ class testTokenController extends Controller
      */
     public function me()// chuyền cái token lên ,kiểm tra và trả về cái user nếu đúng
     {
-        if(Auth::user())
+        if(Auth::user()) // khi moi lan lây api bât kỳ phải cấp lại một token mới
         {
-            return response()->json(Auth::user());
+            return response()->json(["data"=>Auth::user(),"token"=>$this->respondWithToken(Auth::refresh())]);
         }
         else
         {

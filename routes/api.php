@@ -33,5 +33,6 @@ Route::group([
 
 });
 Route::post('getdata_sudungtoken', 'testTokenController2@getdata_sudung_token');
+Route::post('getdata_kosudungtoken', 'testTokenController2@getdata_kosudungtoken');
 
 

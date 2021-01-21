@@ -23,4 +23,11 @@ class testTokenController2 extends Controller
             ]);
         }
     }
+    public function getdata_kosudungtoken()
+    {
+        return response()->json([
+            'ok' => 'get dc data'
+
+        ]);
+    }
 }
